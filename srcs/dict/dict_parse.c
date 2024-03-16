@@ -79,5 +79,5 @@ void	dict_parse(char *str)
 		i++;
 	if (str[i] != '\n')
 		i += getword(word, str + i);
-	dict_set(dict_entry, number, word);
+	dict_set(&dict_entry, number, word);
 }
