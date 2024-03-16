@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dict_type.h                                        :+:      :+:    :+:   */
+/*   dict_set.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamu <mamu@c2r6s9.42singapore.sg>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 15:19:57 by mamu              #+#    #+#             */
-/*   Updated: 2024/03/16 15:48:45 by mamu             ###   ########.fr       */
+/*   Created: 2024/03/16 15:11:03 by mamu              #+#    #+#             */
+/*   Updated: 2024/03/16 15:35:29 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DICT_TYPE_H
-# define DICT_TYPE_H
+#ifndef DICT_SET_H
+# define DICT_SET_H
 
-typedef struct s_dict
-{
-	char	**keys;
-	char	**values;
-	int		size;
-}	t_dict;
+# include "dict_type.h"
+
+void	dict_set(t_dict *dict, char *key, char *value);
 
 #endif
