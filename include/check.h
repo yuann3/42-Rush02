@@ -6,7 +6,7 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 16:52:50 by welee             #+#    #+#             */
-/*   Updated: 2024/03/16 17:16:02 by welee            ###   ########.fr       */
+/*   Updated: 2024/03/16 17:27:56 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,6 @@
 
 # include "./check/check_digits.h"
 # include "./check/check_arg.h"
+# include "./check/check_dict_file.h"
 
 #endif
