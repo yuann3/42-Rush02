@@ -6,27 +6,35 @@
 /*   By: yiyli <etherealdt@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 17:40:19 by yiyli             #+#    #+#             */
-/*   Updated: 2024/03/16 17:01:05 by yiyli            ###   ########.fr       */
+/*   Updated: 2024/03/16 17:21:59 by yiyli            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+int	ft_strlen(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
 
 char	*ft_strcat(char *dest, char *src)
 {
 	int	i;
-	int	j;
+	int	c;
 
+	c = ft_strlen(dest);
 	i = 0;
-	while (dest[i] != '\0')
+	while (src[i] != '\0')
 	{
+		dest[c] = src[i];
+		c++;
 		i++;
 	}
-	j = 0;
-	while (src[j] != '\0')
-	{
-		dest[i] = src[j];
-		i++;
-		j++;
-	}
-	dest[i] = '\0';
+	dest[c] = '\0';
 	return (dest);
 }
