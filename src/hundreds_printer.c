@@ -1,60 +1,56 @@
-void hundreds_printer(char *str)
+#include <string.h>
+const char* words_arr[] = {
+	"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"
+};
+
+const char* tens_arr[] = {
+	"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"
+};
+
+char *hundreds_printer(int number)
 {
-	int x = ft_strlen(str);
-	char num_str[3];
-	if (str == 3)
+	char result[] = "";
+	if (number < 20)
 	{
-		single_printer(str[0]);
-		write(1, "hundred", 7);
-		if (str[1] != '0' && str[2] != '0')
-			write(1, " and ", 5);
-		tens_printer(str + 1);
-		return (atoi(str[0]);
+		strcat(result, words_arr[number]);
+		return result;
 	}
-	else if (str == 2)
+	else if (number < 100)
 	{
-		tens_printer(str);
-		return (0);
+		int tens = number / 10;
+		int ones = number % 10;
+
+		strcat(result, tens_arr[tens]);
+		if (ones > 0)
+		{
+			strcat(result, " ");
+			strcat(result, words_arr[ones]);
+		}
+		return result;
 	}
-	else if (str == 1)
+	else
 	{
-			
+		int hundreds = number / 100;
+		int remainder = number % 100;
+		
+		strcat(result, words_arr[hundreds]);
+		strcat(result, " hundred");
+		if (remainder > 0)
+		{
+			strcat(result, " and ");
+		}
+		strcat(result, hundreds_printer(remainder));
+		return result;
 	}
 }
 
-char *tens_printer(char *nbr)
-{
-	int nb = atoi(nbr);
-	char *print;
-	if (nb >= 90)
-		print = strdup("ninety");
-	else if (nb >= 80)
-		print = strdup("eighty");
-	else if (nb >= 70)
-		print = strdup("seventy");
-	else if (nb >= 60)
-		print = strdup("sixty");
-	else if (nb >= 50)
-		print = strdup("fifty");
-	else if (nb >= 40)
-		print = strdup("fourty");
-	else if (nb >= 30)
-		print = strdup("thirty");
-	else if (nb >= 20)
-		print = strdup("twenty");
-	else if (nb <= 20)
-		print = word_finder(nb);
 
-void single_printer(char c)
-{
-	write(1, &c, 1);
-}
-
-
+//test main function
 #include <stdio.h>
-int main()
-{
-	//test main function
-	char a[4] = "321";
-	char *print = hundreds_printer(a);
-	printf("%s\n", print);
+int main() {
+    printf("%s\n", hundreds_printer(5));
+    printf("%s\n", hundreds_printer(25));
+    printf("%s\n", hundreds_printer(123));
+    printf("%s\n", hundreds_printer(999));
+    return 0;
+}
