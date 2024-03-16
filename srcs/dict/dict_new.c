@@ -6,7 +6,7 @@
 /*   By: mamu <mamu@c2r6s9.42singapore.sg>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:28:55 by mamu              #+#    #+#             */
-/*   Updated: 2024/03/16 15:45:06 by mamu             ###   ########.fr       */
+/*   Updated: 2024/03/16 16:41:19 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ static char	**str_arr_new(void)
 	char	**arr;
 
 	arr = malloc(sizeof(*arr));
-	arr[0] = 0;
 	return (arr);
 }
 
