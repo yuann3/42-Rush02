@@ -13,10 +13,10 @@
 #ifndef DICT_H
 # define DICT_H
 
-# include "dict/dict_get.h"
-# include "dict/dict_mock.h"
+# include "dict/dict_type.h"
 # include "dict/dict_new.h"
 # include "dict/dict_set.h"
-# include "dict/dict_type.h"
+# include "dict/dict_mock.h"
+# include "dict/dict_get.h"
 
 #endif
