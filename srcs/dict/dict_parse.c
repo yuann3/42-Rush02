@@ -6,7 +6,7 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 16:27:44 by qxiang            #+#    #+#             */
-/*   Updated: 2024/03/16 20:41:08 by welee            ###   ########.fr       */
+/*   Updated: 2024/03/16 21:10:39 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static int	getword(char *dest, char *str)
 	return (i);
 }
 
-void	dict_parse(char *str)
+t_dict	dict_parse(char *str)
 {
 	int			i;
 	char		*number;
@@ -68,4 +68,5 @@ void	dict_parse(char *str)
 	if (str[i] != '\n')
 		i += getword(word, str + i);
 	dict_set(&dict_entry, number, word);
+	return (dict_entry);
 }

@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   dict_parse.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qxiang <qxiang@student.42singapore.sg      +#+  +:+       +#+        */
+/*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 16:33:40 by qxiang            #+#    #+#             */
-/*   Updated: 2024/03/16 16:34:16 by qxiang           ###   ########.fr       */
+/*   Updated: 2024/03/16 21:12:52 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DICT_PARSE_H
 # define DICT_PARSE_H
 
-void	dict_parse(char *str);
+# include "dict_type.h"
+
+t_dict	dict_parse(char *str);
 
 #endif
