@@ -6,8 +6,15 @@
 /*   By: mamu <mamu@c2r6s9.42singapore.sg>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:11:05 by mamu              #+#    #+#             */
-/*   Updated: 2024/03/16 15:11:05 by mamu             ###   ########.fr       */
+/*   Updated: 2024/03/16 15:19:45 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef DICT_MOCK_H
+# define DICT_MOCK_H
 
+# include "dict_type.h"
+
+t_dict	dict_mock(void);
+
+#endif

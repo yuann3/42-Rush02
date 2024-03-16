@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dict_get.h                                         :+:      :+:    :+:   */
+/*   dict_type.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamu <mamu@c2r6s9.42singapore.sg>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 15:11:03 by mamu              #+#    #+#             */
-/*   Updated: 2024/03/16 15:20:47 by mamu             ###   ########.fr       */
+/*   Created: 2024/03/16 15:19:57 by mamu              #+#    #+#             */
+/*   Updated: 2024/03/16 15:20:06 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DICT_GET_H
-# define DICT_GET_H
+#ifndef DICT_TYPE_H
+# define DICT_TYPE_H
 
-# include "dict_type.h"
-
-char	*dict_get(t_dict dict, char *key);
+typedef struct s_dict
+{
+	char	*keys;
+	char	*values;
+}	t_dict;
 
 #endif
