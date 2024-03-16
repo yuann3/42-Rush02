@@ -20,7 +20,7 @@ char	*dict_get(t_dict *dict, char *key)
 	i = 0;
 	while (i < dict->size)
 	{
-		if (strcmp(key, dict->keys[i]) == 0)
+		if (ft_strcmp(key, dict->keys[i]) == 0)
 			return (dict->values[i]);
 		i++;
 	}
