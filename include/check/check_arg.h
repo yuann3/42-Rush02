@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   check_arg.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 15:35:27 by welee             #+#    #+#             */
-/*   Updated: 2024/03/16 17:15:16 by welee            ###   ########.fr       */
+/*   Created: 2024/03/16 17:13:37 by welee             #+#    #+#             */
+/*   Updated: 2024/03/16 17:14:13 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "main.h"
-#include "check.h"
+#ifndef CHECK_ARG_H
+# define CHECK_ARG_H
 
-int	main(int argc, char **argv)
-{
-	if (!check_arg(argc, argv))
-	{
-		ft_error("Error\n");
-		return (1);
-	}
-	return (0);
-}
+int	check_arg(int argc, char **argv);
+
+#endif

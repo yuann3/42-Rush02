@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   check.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 15:35:27 by welee             #+#    #+#             */
-/*   Updated: 2024/03/16 17:15:16 by welee            ###   ########.fr       */
+/*   Created: 2024/03/16 16:52:50 by welee             #+#    #+#             */
+/*   Updated: 2024/03/16 17:16:02 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "main.h"
-#include "check.h"
+#ifndef CHECK_H
+# define CHECK_H
 
-int	main(int argc, char **argv)
-{
-	if (!check_arg(argc, argv))
-	{
-		ft_error("Error\n");
-		return (1);
-	}
-	return (0);
-}
+# include "./check/check_digits.h"
+# include "./check/check_arg.h"
+
+#endif

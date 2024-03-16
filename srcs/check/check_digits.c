@@ -3,13 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   check_digits.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
+/*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:06:48 by mintan            #+#    #+#             */
-/*   Updated: 2024/03/16 15:14:08 by mintan           ###   ########.fr       */
+/*   Updated: 2024/03/16 17:15:01 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/// @brief check if the string contains only digits
+/// @param str string to check
+/// @return 1 if the string contains only digits, 0 otherwise
 int	check_digits(char *str)
 {
 	int	i;
