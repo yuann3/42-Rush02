@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
+/*   By: yiyli <etherealdt@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:18:24 by welee             #+#    #+#             */
-/*   Updated: 2024/03/16 15:43:28 by welee            ###   ########.fr       */
+/*   Updated: 2024/03/16 17:01:58 by yiyli            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,6 @@
 # include "ft_putstr.h"
 # include "ft_strcmp.h"
 # include "ft_strlen.h"
+# include "ft_strcat.h"
 
 #endif
