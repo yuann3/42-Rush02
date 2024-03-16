@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "ft_strlen.h"
+#include "ft.h"
 
 void	ft_error(char *str)
 {
