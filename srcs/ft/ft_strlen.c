@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 15:18:24 by welee             #+#    #+#             */
-/*   Updated: 2024/03/16 15:21:46 by welee            ###   ########.fr       */
+/*   Created: 2024/03/06 18:43:34 by welee             #+#    #+#             */
+/*   Updated: 2024/03/16 09:37:48 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_H
-# define FT_H
+/// @brief find the length of a string
+/// @param str string to be measured
+/// @return the length of the string
+int	ft_strlen(char *str)
+{
+	int	len;
 
-# include "ft_atoi.h"
-# include "ft_putchar.h"
-# include "ft_putstr.h"
-# include "ft_strcmp.h"
-# include "ft_strlen.h"
-
-#endif
+	len = 0;
+	while (str[len] != '\0')
+	{
+		len++;
+	}
+	return (len);
+}

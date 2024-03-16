@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   ft_strcmp.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 15:18:24 by welee             #+#    #+#             */
-/*   Updated: 2024/03/16 15:21:46 by welee            ###   ########.fr       */
+/*   Created: 2024/03/16 09:39:59 by welee             #+#    #+#             */
+/*   Updated: 2024/03/16 09:40:09 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_H
-# define FT_H
+#ifndef FT_STRCMP_H
+# define FT_STRCMP_H
 
-# include "ft_atoi.h"
-# include "ft_putchar.h"
-# include "ft_putstr.h"
-# include "ft_strcmp.h"
-# include "ft_strlen.h"
+int	ft_strcmp(char *s1, char *s2);
 
 #endif

@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   ft_strlen.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 15:18:24 by welee             #+#    #+#             */
-/*   Updated: 2024/03/16 15:21:46 by welee            ###   ########.fr       */
+/*   Created: 2024/03/16 09:39:13 by welee             #+#    #+#             */
+/*   Updated: 2024/03/16 09:39:30 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_H
-# define FT_H
+#ifndef FT_STRLEN_H
+# define FT_STRLEN_H
 
-# include "ft_atoi.h"
-# include "ft_putchar.h"
-# include "ft_putstr.h"
-# include "ft_strcmp.h"
-# include "ft_strlen.h"
+int	ft_strlen(char *str);
 
 #endif

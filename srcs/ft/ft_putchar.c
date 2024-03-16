@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 15:18:24 by welee             #+#    #+#             */
-/*   Updated: 2024/03/16 15:21:46 by welee            ###   ########.fr       */
+/*   Created: 2024/03/09 14:54:32 by welee             #+#    #+#             */
+/*   Updated: 2024/03/16 09:36:01 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_H
-# define FT_H
+#include <unistd.h>
 
-# include "ft_atoi.h"
-# include "ft_putchar.h"
-# include "ft_putstr.h"
-# include "ft_strcmp.h"
-# include "ft_strlen.h"
-
-#endif
+/// @brief print a character to the standard output
+/// @param c character to be printed
+void	ft_putchar(char c)
+{
+	write(STDOUT_FILENO, &c, 1);
+}
