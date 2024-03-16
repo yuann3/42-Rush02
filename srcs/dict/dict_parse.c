@@ -6,7 +6,7 @@
 /*   By: qxiang <qxiang@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 16:27:44 by qxiang            #+#    #+#             */
-/*   Updated: 2024/03/16 17:24:10 by qxiang           ###   ########.fr       */
+/*   Updated: 2024/03/16 17:47:42 by qxiang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,38 @@
 #include "ft_strcat.h"
 #include <stdlib.h>
 
-static int	getnb(char *dest, char *str)
+static int	getnbr(char *dest, char *str)
 {
-	ft_strcat(number, str[i]);
+	int	i;
 
+	i = 0;
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		ft_strcat(dest, str[i]);
+		i++;
+	}
+	return (i);
 }
 
-static int	getword(char *dest. char *str)
+static int	getword(char *dest, char *str)
 {
-	
+	int	i;
+
+	i = 0;
+	while ((str[i] >= 65 && str[i] <= 90) || (str[i] >= 97 && str[i] <= 122))
+	{
+		ft_strcat(dest, str[i]);
+		i++;
+	}
+	return (i);
 }
 
 void	dict_parse(char *str)
 {
-	int	i;
-	char	*number;
-	char	*word;
-	t_dict	dict_entry;
+	int			i;
+	char		*number;
+	char		*word;
+	t_dict		dict_entry;
 
 	i = 0;
 	dict_entry = dict_new();
