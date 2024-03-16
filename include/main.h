@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mamu <mamu@c2r6s9.42singapore.sg>          +#+  +:+       +#+        */
+/*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:12:49 by mamu              #+#    #+#             */
-/*   Updated: 2024/03/16 15:13:09 by mamu             ###   ########.fr       */
+/*   Updated: 2024/03/16 17:55:15 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MAIN_H
 # define MAIN_H
 
+# include "check.h"
 # include "dict.h"
 # include "ft.h"
 
