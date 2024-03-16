@@ -6,11 +6,7 @@
 /*   By: qxiang <qxiang@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 16:27:44 by qxiang            #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2024/03/16 17:59:35 by qxiang           ###   ########.fr       */
-=======
-/*   Updated: 2024/03/16 17:52:26 by cgoh             ###   ########.fr       */
->>>>>>> 1491aa4 (modified dict_parse.c)
+/*   Updated: 2024/03/16 18:07:54 by qxiang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +16,8 @@
 
 static int	getnbr(char *dest, char *str)
 {
-<<<<<<< HEAD
 	int		i;
 	char	c[2];
-=======
-	ft_strcat(dest, str);
->>>>>>> 1491aa4 (modified dict_parse.c)
 
 	i = 0;
 	c[1] = '\0';
@@ -40,7 +32,6 @@ static int	getnbr(char *dest, char *str)
 
 static int	getword(char *dest, char *str)
 {
-<<<<<<< HEAD
 	int	i;
 	char	c[2];
 
@@ -53,9 +44,6 @@ static int	getword(char *dest, char *str)
 		i++;
 	}
 	return (i);
-=======
-	ft_strcat(dest, str);
->>>>>>> 1491aa4 (modified dict_parse.c)
 }
 
 void	dict_parse(char *str)
