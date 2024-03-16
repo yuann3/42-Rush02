@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yiyli <etherealdt@gmail.com>               +#+  +:+       +#+        */
+/*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 17:40:19 by yiyli             #+#    #+#             */
-/*   Updated: 2024/03/16 17:38:10 by yiyli            ###   ########.fr       */
+/*   Updated: 2024/03/16 20:40:13 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str);
+#include "ft.h"
 
 char	*ft_strcat(char *dest, char *src)
 {

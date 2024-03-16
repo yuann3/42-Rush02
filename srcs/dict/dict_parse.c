@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   dict_parse.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qxiang <qxiang@student.42singapore.sg      +#+  +:+       +#+        */
+/*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 16:27:44 by qxiang            #+#    #+#             */
-/*   Updated: 2024/03/16 18:07:54 by qxiang           ###   ########.fr       */
+/*   Updated: 2024/03/16 20:41:08 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int	getnbr(char *dest, char *str)
 
 static int	getword(char *dest, char *str)
 {
-	int	i;
+	int		i;
 	char	c[2];
 
 	i = 0;

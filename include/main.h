@@ -6,7 +6,7 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:12:49 by mamu              #+#    #+#             */
-/*   Updated: 2024/03/16 17:55:15 by welee            ###   ########.fr       */
+/*   Updated: 2024/03/16 19:23:58 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "check.h"
 # include "dict.h"
+# include "file.h"
 # include "ft.h"
 
 #endif

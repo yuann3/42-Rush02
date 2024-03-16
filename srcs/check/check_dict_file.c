@@ -6,7 +6,7 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 17:06:42 by welee             #+#    #+#             */
-/*   Updated: 2024/03/16 18:03:04 by welee            ###   ########.fr       */
+/*   Updated: 2024/03/16 20:40:34 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@
 /// @return 1 if the file exists, 0 otherwise
 int	check_dict_file(char *dict)
 {
-	int	fd;
-	char buf[BUF_SIZE];
-	long bytes_read;
+	int		fd;
+	char	buf[BUF_SIZE];
+	ssize_t	bytes_read;
 
 	fd = open(dict, O_RDONLY);
 	if (fd == -1)
