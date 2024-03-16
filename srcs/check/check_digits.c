@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   check_digits.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yiyli <etherealdt@gmail.com>               +#+  +:+       +#+        */
+/*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/05 17:40:19 by yiyli             #+#    #+#             */
-/*   Updated: 2024/03/16 16:56:36 by yiyli            ###   ########.fr       */
+/*   Created: 2024/03/16 15:06:48 by mintan            #+#    #+#             */
+/*   Updated: 2024/03/16 15:14:08 by mintan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *dest, char *src)
+int	check_digits(char *str)
 {
 	int	i;
-	int	j;
 
 	i = 0;
-	while (dest[i] != '\0')
+	while (str[i] != '\0')
 	{
-		i++;
+		if (str[i] < '0' || str[i] > '9')
+			return (0);
 	}
-	j = 0;
-	while (src[j] != '\0')
-	{
-		dest[i] = src[j];
-		i++;
-		j++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	return (1);
 }
