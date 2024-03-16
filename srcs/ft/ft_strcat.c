@@ -6,21 +6,11 @@
 /*   By: yiyli <etherealdt@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 17:40:19 by yiyli             #+#    #+#             */
-/*   Updated: 2024/03/16 17:21:59 by yiyli            ###   ########.fr       */
+/*   Updated: 2024/03/16 17:38:10 by yiyli            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
+int	ft_strlen(char *str);
 
 char	*ft_strcat(char *dest, char *src)
 {
