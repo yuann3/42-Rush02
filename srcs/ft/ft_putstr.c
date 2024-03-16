@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_putchar.h"
+#include "ft.h"
 
 /// @brief print string
 /// @param str string to be printed
