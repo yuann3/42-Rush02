@@ -10,6 +10,9 @@
 # KDE directory preferences
 .directory
 
+# swap
+.swap
+
 # Linux trash folder which might appear on any partition or disk
 .Trash-*
 
