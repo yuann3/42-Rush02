@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: yiyli <etherealdt@gmail.com>               +#+  +:+       +#+         #
+#    By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/16 16:28:52 by yiyli             #+#    #+#              #
-#    Updated: 2024/03/16 17:19:54 by yiyli            ###   ########.fr        #
+#    Updated: 2024/03/16 18:26:46 by welee            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ SRCS_DIR = srcs
 INCLUDES_DIR = include
 INCLUDES = -I ${INCLUDES_DIR}
 RM = rm -f
+MKDIR = mkdir -p
 OBJECTS_DIR = objs
 
 SRCS = $(shell find $(SRCS_DIR) -name '*.c')
@@ -28,7 +29,7 @@ $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 $(OBJECTS_DIR)/%.o: $(SRCS_DIR)/%.c
-	@mkdir -p $(@D)
+	$(MKDIR) $(@D)
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 clean:
