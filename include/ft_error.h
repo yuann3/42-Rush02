@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_error.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 15:35:27 by welee             #+#    #+#             */
-/*   Updated: 2024/03/16 15:43:14 by welee            ###   ########.fr       */
+/*   Created: 2024/03/16 15:41:55 by welee             #+#    #+#             */
+/*   Updated: 2024/03/16 15:42:13 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
+#ifndef FT_ERROR_H
+# define FT_ERROR_H
 
-int	main(int argc, char **argv)
-{
-	if (argc == 2)
-	{
-		ft_putstr(argv[1]);
-	}
-	else
-	{
-		ft_error("Error\n");
-	}
-	return (0);
-}
+void	ft_error(char *str);
+
+#endif

@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcmp.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 15:35:27 by welee             #+#    #+#             */
-/*   Updated: 2024/03/16 15:43:14 by welee            ###   ########.fr       */
+/*   Created: 2024/03/16 09:39:59 by welee             #+#    #+#             */
+/*   Updated: 2024/03/16 09:40:09 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
+#ifndef FT_STRCMP_H
+# define FT_STRCMP_H
 
-int	main(int argc, char **argv)
-{
-	if (argc == 2)
-	{
-		ft_putstr(argv[1]);
-	}
-	else
-	{
-		ft_error("Error\n");
-	}
-	return (0);
-}
+int	ft_strcmp(char *s1, char *s2);
+
+#endif

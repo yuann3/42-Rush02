@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 15:35:27 by welee             #+#    #+#             */
-/*   Updated: 2024/03/16 15:43:14 by welee            ###   ########.fr       */
+/*   Created: 2024/03/16 15:39:01 by welee             #+#    #+#             */
+/*   Updated: 2024/03/16 15:40:52 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
+#include <unistd.h>
+#include "ft_strlen.h"
 
-int	main(int argc, char **argv)
+void	ft_error(char *str)
 {
-	if (argc == 2)
-	{
-		ft_putstr(argv[1]);
-	}
-	else
-	{
-		ft_error("Error\n");
-	}
-	return (0);
+	write(STDERR_FILENO, str, ft_strlen(str));
 }

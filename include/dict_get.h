@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   dict_get.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
+/*   By: mamu <mamu@c2r6s9.42singapore.sg>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 15:35:27 by welee             #+#    #+#             */
-/*   Updated: 2024/03/16 15:43:14 by welee            ###   ########.fr       */
+/*   Created: 2024/03/16 15:11:03 by mamu              #+#    #+#             */
+/*   Updated: 2024/03/16 15:20:47 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
+#ifndef DICT_GET_H
+# define DICT_GET_H
 
-int	main(int argc, char **argv)
-{
-	if (argc == 2)
-	{
-		ft_putstr(argv[1]);
-	}
-	else
-	{
-		ft_error("Error\n");
-	}
-	return (0);
-}
+# include "dict_type.h"
+
+char	*dict_get(t_dict dict, char *key);
+
+#endif

@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   dict_mock.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
+/*   By: mamu <mamu@c2r6s9.42singapore.sg>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 15:35:27 by welee             #+#    #+#             */
-/*   Updated: 2024/03/16 15:43:14 by welee            ###   ########.fr       */
+/*   Created: 2024/03/16 15:11:05 by mamu              #+#    #+#             */
+/*   Updated: 2024/03/16 15:19:45 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
+#ifndef DICT_MOCK_H
+# define DICT_MOCK_H
 
-int	main(int argc, char **argv)
-{
-	if (argc == 2)
-	{
-		ft_putstr(argv[1]);
-	}
-	else
-	{
-		ft_error("Error\n");
-	}
-	return (0);
-}
+# include "dict_type.h"
+
+t_dict	dict_mock(void);
+
+#endif

@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 15:35:27 by welee             #+#    #+#             */
-/*   Updated: 2024/03/16 15:43:14 by welee            ###   ########.fr       */
+/*   Created: 2024/03/06 17:58:23 by welee             #+#    #+#             */
+/*   Updated: 2024/03/16 15:30:45 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
+#include "ft_putchar.h"
 
-int	main(int argc, char **argv)
+/// @brief print string
+/// @param str string to be printed
+void	ft_putstr(char *str)
 {
-	if (argc == 2)
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
 	{
-		ft_putstr(argv[1]);
+		ft_putchar(str[i]);
+		i++;
 	}
-	else
-	{
-		ft_error("Error\n");
-	}
-	return (0);
 }
