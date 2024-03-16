@@ -6,7 +6,7 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:20:14 by mintan            #+#    #+#             */
-/*   Updated: 2024/03/16 17:44:00 by welee            ###   ########.fr       */
+/*   Updated: 2024/03/16 18:01:53 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,16 +41,22 @@ char	*file_read(char *file)
 	int		fd;
 	char	*buffer;
 	ssize_t	bytes_read;
-	ssize_t	size;
 
-	size = file_size(file);
+	bytes_read = file_size(file);
 	if (bytes_read == -1)
 	{
 		ft_error("Error\n");
 		return (NULL);
 	}
 	fd = open(file, O_RDONLY);
-	buffer = (char *)malloc(size);
-	bytes_read = read(fd, buffer, size);
+	buffer = (char *)malloc(bytes_read);
+	bytes_read = read(fd, buffer, bytes_read);
+	if (bytes_read == -1)
+	{
+		ft_error("Error\n");
+		close(fd);
+		return (NULL);
+	}
+	close(fd);
 	return (buffer);
 }

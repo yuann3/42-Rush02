@@ -6,12 +6,14 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 17:06:42 by welee             #+#    #+#             */
-/*   Updated: 2024/03/16 17:40:27 by welee            ###   ########.fr       */
+/*   Updated: 2024/03/16 18:03:04 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <fcntl.h>
 #include <unistd.h>
+
+#define BUF_SIZE 4096
 
 /// @brief check if the dictionary file exists
 /// @param dict dictionary file
@@ -19,7 +21,7 @@
 int	check_dict_file(char *dict)
 {
 	int	fd;
-	char *buf;
+	char buf[BUF_SIZE];
 	long bytes_read;
 
 	fd = open(dict, O_RDONLY);
@@ -31,7 +33,6 @@ int	check_dict_file(char *dict)
 		close(fd);
 		return (0);
 	}
-
 	close(fd);
 	return (1);
 }
