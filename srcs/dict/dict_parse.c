@@ -6,11 +6,13 @@
 /*   By: qxiang <qxiang@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 16:27:44 by qxiang            #+#    #+#             */
-/*   Updated: 2024/03/16 16:29:30 by qxiang           ###   ########.fr       */
+/*   Updated: 2024/03/16 16:48:20 by qxiang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "dict_parse.h"
+#include "dict_new.h"
+#include "dict_set.h"
 #include <stdlib.h>
 
 void	dict_parse(char *str)
