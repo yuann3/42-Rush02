@@ -6,7 +6,7 @@
 /*   By: mamu <mamu@c2r6s9.42singapore.sg>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:11:03 by mamu              #+#    #+#             */
-/*   Updated: 2024/03/16 15:20:47 by mamu             ###   ########.fr       */
+/*   Updated: 2024/03/16 15:23:23 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 
 # include "dict_type.h"
 
-char	*dict_get(t_dict dict, char *key);
+char	*dict_get(t_dict *dict, char *key);
 
 #endif
