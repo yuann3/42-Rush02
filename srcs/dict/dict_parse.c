@@ -1,11 +1,12 @@
-
 void	dict_parse(char *str)
 {
 	int	i;
 	char	*number;
 	char	*word;
+	t_dict	dict_entry;
 
 	i = 0;
+	dict_entry = dict_new();
 	number = malloc(sizeof(char) * 128);
 	word = malloc(sizeof(char) * 128);
 	number = 0;
@@ -26,4 +27,5 @@ void	dict_parse(char *str)
 		i++;
 	}
 	// word saved into array
+	dict_set(dict_entry, number, word);
 }
