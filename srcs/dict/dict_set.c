@@ -6,7 +6,7 @@
 /*   By: mamu <mamu@c2r6s9.42singapore.sg>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:21:23 by mamu              #+#    #+#             */
-/*   Updated: 2024/03/16 15:48:40 by mamu             ###   ########.fr       */
+/*   Updated: 2024/03/16 16:04:18 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ static void	str_arr_add(char ***strs, int size, char *str)
 		i++;
 	}
 	strs_new[i] = str;
+	free(*strs);
 	*strs = strs_new;
 }
 
