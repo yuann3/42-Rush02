@@ -6,7 +6,7 @@
 /*   By: yiyli <etherealdt@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 12:22:09 by yiyli             #+#    #+#             */
-/*   Updated: 2024/03/16 12:22:09 by yiyli            ###   ########.fr       */
+/*   Updated: 2024/03/16 12:25:52 by yiyli            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,21 +46,23 @@ int	ft_atoi(char *str)
 	return (sign * result);
 }
 
-char	*ft_strdup(char *str)
+char	*ft_strdup(char *src)
 {
-	char	*dup;
 	int		i;
+	char	*dest;
 
 	i = 0;
-	while (str[i])
+	while (src[i] != '\0')
 		i++;
-	dup = (char *)malloc(sizeof(char) * (i + 1));
+	dest = (char *)malloc(sizeof(char) * (i + 1));
+	if (dest == NULL)
+		return (NULL);
 	i = 0;
-	while (str[i])
+	while (src[i] != '\0')
 	{
-		dup[i] = str[i];
+		dest[i] = src[i];
 		i++;
 	}
-	dup[i] = '\0';
-	return (dup);
+	dest[i] = '\0';
+	return (dest);
 }
