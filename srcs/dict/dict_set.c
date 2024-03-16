@@ -1,27 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dict_get.c                                         :+:      :+:    :+:   */
+/*   dict_set.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamu <mamu@c2r6s9.42singapore.sg>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:21:23 by mamu              #+#    #+#             */
-/*   Updated: 2024/03/16 15:25:16 by mamu             ###   ########.fr       */
+/*   Updated: 2024/03/16 16:44:57 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "dict_get.h"
+#include "dict_set.h"
 
-char	*dict_get(t_dict *dict, char *key)
+#include <stdlib.h>
+
+static char	**str_arr_add(char **strs, int size, char *str)
 {
-	int	i;
+	char	**arr;
+	int		i;
 
+	arr = malloc(sizeof(*strs) * (size + 1));
 	i = 0;
-	while (i < dict->size)
+	while (i < size)
 	{
-		if (key == dict->keys[i])
-			return (dict->values[i]);
+		arr[i] = strs[i];
 		i++;
 	}
-	return (0);
+	arr[i] = str;
+	return (arr);
+}
+
+void	dict_set(t_dict *dict, char *key, char *value)
+{
+	char	**keys;
+	char	**values;
+
+	keys = str_arr_add(dict->keys, dict->size, key);
+	free(dict->keys);
+	dict->keys = keys;
+	values = str_arr_add(dict->values, dict->size, value);
+	free(dict->values);
+	dict->values = values;
+	dict->size += 1;
 }

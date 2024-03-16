@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: yiyli <etherealdt@gmail.com>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/03/16 12:04:40 by yiyli             #+#    #+#              #
-#    Updated: 2024/03/16 15:29:44 by yiyli            ###   ########.fr        #
+#    Created: 2024/03/16 16:28:52 by yiyli             #+#    #+#              #
+#    Updated: 2024/03/16 16:28:53 by yiyli            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,22 +17,25 @@ SRCS_DIR = srcs
 INCLUDES_DIR = include
 INCLUDES = -I ${INCLUDES_DIR}
 RM = rm -f
-SRCS = $(wildcard ${SRCS_DIR}/*.c ${SRCS_DIR}/*/*.c)
-OBJS = $(notdir $(SRCS:.c=.o))
+OBJECTS_DIR = objs
+
+SRCS = $(shell find $(SRCS_DIR) -name '*.c')
+OBJS = $(SRCS:$(SRCS_DIR)/%.c=$(OBJECTS_DIR)/%.o)
 
 all: ${NAME}
 
-${NAME}: ${OBJS}
-	${CC} ${INCLUDES} ${CFLAGS} $? -o $@ 
+$(NAME): $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
-${OBJS} : ${SRCS}
-	${CC} ${INCLUDES} ${CFLAGS} -c ${SRCS}
+$(OBJECTS_DIR)/%.o: $(SRCS_DIR)/%.c
+	@mkdir -p $(@D)
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 clean:
-	${RM} ${OBJS}
+	$(RM) -r $(OBJECTS_DIR)
 
 fclean: clean
-	${RM} ${NAME}
+	$(RM) $(NAME)
 
 re: fclean all
 

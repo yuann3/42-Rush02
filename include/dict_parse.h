@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dict_get.h                                         :+:      :+:    :+:   */
+/*   dict_parse.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mamu <mamu@c2r6s9.42singapore.sg>          +#+  +:+       +#+        */
+/*   By: qxiang <qxiang@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 15:11:03 by mamu              #+#    #+#             */
-/*   Updated: 2024/03/16 15:23:23 by mamu             ###   ########.fr       */
+/*   Created: 2024/03/16 16:33:40 by qxiang            #+#    #+#             */
+/*   Updated: 2024/03/16 16:34:16 by qxiang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DICT_GET_H
-# define DICT_GET_H
+#ifndef DICT_PARSE_H
+# define DICT_PARSE_H
 
-# include "dict_type.h"
-
-char	*dict_get(t_dict *dict, char *key);
+void	dict_parse(char *str);
 
 #endif
