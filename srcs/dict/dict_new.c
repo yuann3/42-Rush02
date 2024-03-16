@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   dict_new.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mamu <mamu@c2r6s9.42singapore.sg>          +#+  +:+       +#+        */
+/*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:28:55 by mamu              #+#    #+#             */
-/*   Updated: 2024/03/16 16:41:19 by mamu             ###   ########.fr       */
+/*   Updated: 2024/03/16 17:48:27 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "dict_new.h"
-
 #include <stdlib.h>
+#include "dict.h"
 
 static char	**str_arr_new(void)
 {

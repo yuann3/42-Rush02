@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   file_read.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
+/*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:20:14 by mintan            #+#    #+#             */
-/*   Updated: 2024/03/16 17:39:52 by mintan           ###   ########.fr       */
+/*   Updated: 2024/03/16 17:44:00 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 /// @brief retrieves the file size of the file
 /// @param str file path to read
 /// @return returns the size of the file (no. of bytes)
-
 ssize_t	file_size(char *file)
 {
 	ssize_t	bytes_read;
@@ -34,9 +33,9 @@ ssize_t	file_size(char *file)
 	return (bytes_read);
 }
 
-///@brief reads a file and returns the contents in the file as a string
-///@param str file path to read
-///@return str read from the file
+/// @brief reads a file and returns the contents in the file as a string
+/// @param str file path to read
+/// @return str read from the file
 char	*file_read(char *file)
 {
 	int		fd;

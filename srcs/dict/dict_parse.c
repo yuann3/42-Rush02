@@ -3,18 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   dict_parse.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qxiang <qxiang@student.42singapore.sg      +#+  +:+       +#+        */
+/*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 16:27:44 by qxiang            #+#    #+#             */
-/*   Updated: 2024/03/16 17:47:42 by qxiang           ###   ########.fr       */
+/*   Updated: 2024/03/16 17:52:58 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "dict_parse.h"
-#include "dict_new.h"
-#include "dict_set.h"
-#include "ft_strcat.h"
 #include <stdlib.h>
+#include "dict.h"
+#include "ft.h"
 
 static int	getnbr(char *dest, char *str)
 {

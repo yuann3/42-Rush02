@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dict_get.c                                         :+:      :+:    :+:   */
+/*   ft_strcat.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 15:21:23 by mamu              #+#    #+#             */
-/*   Updated: 2024/03/16 17:47:57 by welee            ###   ########.fr       */
+/*   Created: 2024/03/16 17:46:44 by welee             #+#    #+#             */
+/*   Updated: 2024/03/16 17:46:47 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "dict.h"
-#include "ft.h"
+#ifndef FT_STRCAT_H
+# define FT_STRCAT_H
 
-char	*dict_get(t_dict *dict, char *key)
-{
-	int	i;
+char	*ft_strcat(char *dest, char *src);
 
-	i = 0;
-	while (i < dict->size)
-	{
-		if (strcmp(key, dict->keys[i]) == 0)
-			return (dict->values[i]);
-		i++;
-	}
-	return (0);
-}
+#endif

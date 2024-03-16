@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   dict_mock.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: feltan <feltan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:21:30 by mamu              #+#    #+#             */
-/*   Updated: 2024/03/16 16:43:22 by mamu             ###   ########.fr       */
+/*   Updated: 2024/03/16 17:48:13 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "dict_mock.h"
-
-#include "dict_new.h"
-#include "dict_set.h"
+#include "dict.h"
 
 t_dict	dict_mock(void)
 {

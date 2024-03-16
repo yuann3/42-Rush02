@@ -6,15 +6,32 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 17:06:42 by welee             #+#    #+#             */
-/*   Updated: 2024/03/16 17:14:55 by welee            ###   ########.fr       */
+/*   Updated: 2024/03/16 17:40:27 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/// @brief check if the dictionary file is valid
-/// @param file_name dictionary file name
-/// @return 1 if the dictionary file is valid, 0 otherwise
-int	check_dict_file(char *file_name)
+#include <fcntl.h>
+#include <unistd.h>
+
+/// @brief check if the dictionary file exists
+/// @param dict dictionary file
+/// @return 1 if the file exists, 0 otherwise
+int	check_dict_file(char *dict)
 {
-	(void)file_name;
+	int	fd;
+	char *buf;
+	long bytes_read;
+
+	fd = open(dict, O_RDONLY);
+	if (fd == -1)
+		return (0);
+	bytes_read = read(fd, buf, BUF_SIZE);
+	if (bytes_read == -1)
+	{
+		close(fd);
+		return (0);
+	}
+
+	close(fd);
 	return (1);
 }
