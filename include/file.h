@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   file_read.h                                        :+:      :+:    :+:   */
+/*   file.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mintan <mintan@student.42singapore.sg      +#+  +:+       +#+        */
+/*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 17:46:58 by mintan            #+#    #+#             */
-/*   Updated: 2024/03/16 17:50:47 by mintan           ###   ########.fr       */
+/*   Created: 2024/03/16 17:57:53 by welee             #+#    #+#             */
+/*   Updated: 2024/03/16 17:58:04 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FILE_READ_H
-# define FILE_READ_H
+#ifndef FILE_H
+# define FILE_H
 
-#include "file_read.h"
-
-char	*file_read(char *file);
+# include "file/file_read.h"
 
 #endif
