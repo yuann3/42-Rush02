@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	s_len(char *src)
+#include "ft_strcat.h"
+
+static unsigned int	s_len(char *src)
 {
 	int	j;
 
