@@ -6,11 +6,12 @@
 /*   By: mamu <mamu@c2r6s9.42singapore.sg>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:21:23 by mamu              #+#    #+#             */
-/*   Updated: 2024/03/16 15:25:16 by mamu             ###   ########.fr       */
+/*   Updated: 2024/03/16 17:43:55 by cgoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "dict_get.h"
+#include "ft_strcmp.h"
 
 char	*dict_get(t_dict *dict, char *key)
 {
@@ -19,7 +20,7 @@ char	*dict_get(t_dict *dict, char *key)
 	i = 0;
 	while (i < dict->size)
 	{
-		if (key == dict->keys[i])
+		if (strcmp(key, dict->keys[i]) == 0)
 			return (dict->values[i]);
 		i++;
 	}
