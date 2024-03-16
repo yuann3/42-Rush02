@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   dict_parse.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
+/*   By: qxiang <qxiang@student.42singapore.sg      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 16:27:44 by qxiang            #+#    #+#             */
-/*   Updated: 2024/03/16 17:52:58 by welee            ###   ########.fr       */
+/*   Updated: 2024/03/16 17:59:35 by qxiang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,15 @@
 
 static int	getnbr(char *dest, char *str)
 {
-	int	i;
+	int		i;
+	char	c[2];
 
 	i = 0;
+	c[1] = '\0';
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		ft_strcat(dest, str[i]);
+		c[0] = str[i];
+		ft_strcat(dest, c);
 		i++;
 	}
 	return (i);
@@ -30,11 +33,14 @@ static int	getnbr(char *dest, char *str)
 static int	getword(char *dest, char *str)
 {
 	int	i;
+	char	c[2];
 
 	i = 0;
+	c[1] = '\0';
 	while ((str[i] >= 65 && str[i] <= 90) || (str[i] >= 97 && str[i] <= 122))
 	{
-		ft_strcat(dest, str[i]);
+		c[0] = str[i];
+		ft_strcat(dest, c);
 		i++;
 	}
 	return (i);
@@ -57,11 +63,9 @@ void	dict_parse(char *str)
 		i++;
 	if (str[i] >= '0' && str[i] <= '9')
 		i += getnbr(number, str + i);
-	// number saved into array
 	while (!(str[i] >= 65 && str[i] <= 90) || !(str[i] >= 97 && str[i] <= 122))
 		i++;
-	while (str[i] != '\n')
+	if (str[i] != '\n')
 		i += getword(word, str + i);
-	// word saved into array
 	dict_set(dict_entry, number, word);
 }
