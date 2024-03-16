@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 15:18:24 by welee             #+#    #+#             */
-/*   Updated: 2024/03/16 23:23:26 by welee            ###   ########.fr       */
+/*   Created: 2024/03/02 17:25:21 by welee             #+#    #+#             */
+/*   Updated: 2024/03/16 23:23:08 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_H
-# define FT_H
+#include "./ft/ft_strlen.h"
 
-# include "ft/ft_atoi.h"
-# include "ft/ft_error.h"
-# include "ft/ft_putchar.h"
-# include "ft/ft_putstr.h"
-# include "ft/ft_strcmp.h"
-# include "ft/ft_strlen.h"
-# include "ft/ft_strcat.h"
-# include "ft/ft_strncat.h"
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
+{
+	unsigned int	i;
+	unsigned int	c;
 
-#endif
+	c = ft_strlen(dest);
+	i = 0;
+	while (src[i] != '\0' && i < nb)
+	{
+		dest[c] = src[i];
+		c++;
+		i++;
+	}
+	dest[c] = '\0';
+	return (dest);
+}
