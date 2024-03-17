@@ -16,8 +16,14 @@
 static char	**str_arr_new(void)
 {
 	char	**arr;
+	int i = 0;
 
-	arr = malloc(sizeof(*arr));
+	arr = malloc(sizeof(*arr) * 128);
+	while (i < 128)
+	{
+		arr[i] = malloc(sizeof(char) * 128);
+		i++;
+	}
 	return (arr);
 }
 
