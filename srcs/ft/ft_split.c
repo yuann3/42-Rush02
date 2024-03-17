@@ -6,7 +6,7 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 15:04:40 by welee             #+#    #+#             */
-/*   Updated: 2024/03/16 10:14:21 by welee            ###   ########.fr       */
+/*   Updated: 2024/03/17 18:38:07 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 /// @param c character
 /// @param charset set of characters as separators
 /// @return 1 if character is within charset, else 0
-int	is_charset(char c, char *charset)
+static int	is_charset(char c, char *charset)
 {
 	while (*charset)
 	{
@@ -31,7 +31,7 @@ int	is_charset(char c, char *charset)
 /// @param str string
 /// @param charset set of characters as separators
 /// @return the word count
-int	word_count(char *str, char *charset)
+static int	word_count(char *str, char *charset)
 {
 	int	i;
 	int	count;
@@ -56,7 +56,7 @@ int	word_count(char *str, char *charset)
 /// @param str string
 /// @param charset set of characters as separators
 /// @return the length of the word
-int	count_word_len(char *str, char *charset)
+static int	count_word_len(char *str, char *charset)
 {
 	int	i;
 
@@ -70,7 +70,7 @@ int	count_word_len(char *str, char *charset)
 /// @param str string
 /// @param len length of the word
 /// @return return the word
-char	*add_word(char *str, int len)
+static char	*add_word(char *str, int len)
 {
 	char	*word;
 	int		i;

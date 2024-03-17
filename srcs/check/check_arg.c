@@ -6,12 +6,11 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 17:05:09 by welee             #+#    #+#             */
-/*   Updated: 2024/03/16 19:25:35 by welee            ###   ########.fr       */
+/*   Updated: 2024/03/17 18:42:46 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./check/check_digits.h"
-#include "./check/check_dict_file.h"
+#include "check.h"
 
 /// @brief check if the arguments are valid
 /// @param argc argument count

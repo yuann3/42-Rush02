@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dict_new.h                                         :+:      :+:    :+:   */
+/*   nbr_substr.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamu <mamu@c2r6s9.42singapore.sg>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 15:29:46 by mamu              #+#    #+#             */
-/*   Updated: 2024/03/17 18:44:53 by mamu             ###   ########.fr       */
+/*   Created: 2024/03/17 18:36:33 by mamu              #+#    #+#             */
+/*   Updated: 2024/03/17 18:37:01 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DICT_NEW_H
-# define DICT_NEW_H
+#ifndef NBR_SUBSTR_H
+# define NBR_SUBSTR_H
 
-# include "dict_type.h"
-
-t_dict	dict_new(void);
+char	*nbr_substr(char *str, int from, int to);
 
 #endif

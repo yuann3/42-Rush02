@@ -6,16 +6,14 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 02:38:42 by mamu              #+#    #+#             */
-/*   Updated: 2024/03/17 16:49:21 by welee            ###   ########.fr       */
+/*   Updated: 2024/03/17 18:42:54 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "ft.h"
 #include "dict.h"
-
-char	*nbr_substr(char *str, int from, int to);
-char	*nbr_pad_zero(char c, int zeros);
+#include "ft.h"
+#include "nbr.h"
 
 /// @brief print a string followed by a newline
 /// @param str string

@@ -6,13 +6,13 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:35:27 by welee             #+#    #+#             */
-/*   Updated: 2024/03/17 15:06:11 by welee            ###   ########.fr       */
+/*   Updated: 2024/03/17 18:42:37 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.h"
 
-int	init(char *dict_path, char *input)
+static int	init(char *dict_path, char *input)
 {
 	t_dict	dict;
 	char	*str;

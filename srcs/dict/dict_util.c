@@ -6,13 +6,13 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 16:58:30 by welee             #+#    #+#             */
-/*   Updated: 2024/03/17 17:06:02 by welee            ###   ########.fr       */
+/*   Updated: 2024/03/17 18:40:18 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-int	skip_non_numeric(char *str)
+int	dict_skip_non_numeric(char *str)
 {
 	int	i;
 
@@ -22,7 +22,7 @@ int	skip_non_numeric(char *str)
 	return (i);
 }
 
-int	skip_to_word(char *str)
+int	dict_skip_to_word(char *str)
 {
 	int	i;
 
@@ -36,7 +36,7 @@ int	skip_to_word(char *str)
 	return (i);
 }
 
-int	skip_to_next_entry(char *str)
+int	dict_skip_to_next_entry(char *str)
 {
 	int	i;
 
@@ -46,7 +46,7 @@ int	skip_to_next_entry(char *str)
 	return (i);
 }
 
-int	getnbr(char *dest, char *str)
+int	dict_getnbr(char *dest, char *str)
 {
 	int		i;
 	char	c[64];
@@ -62,7 +62,7 @@ int	getnbr(char *dest, char *str)
 	return (i);
 }
 
-int	getword(char *dest, char *str)
+int	dict_getword(char *dest, char *str)
 {
 	int		i;
 	char	c[64];

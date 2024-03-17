@@ -6,19 +6,13 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 16:27:44 by qxiang            #+#    #+#             */
-/*   Updated: 2024/03/17 17:14:07 by welee            ###   ########.fr       */
+/*   Updated: 2024/03/17 18:40:26 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "dict.h"
 #include "ft.h"
-
-int	skip_non_numeric(char *str);
-int	skip_to_word(char *str);
-int	skip_to_next_entry(char *str);
-int	getnbr(char *dest, char *str);
-int	getword(char *dest, char *str);
 
 /// @brief parsing the string and store the key-value pair in the dictionary
 /// @param origin dictionary
@@ -41,11 +35,11 @@ int	dict_parse(t_dict *origin, char *str)
 			free(word);
 			return (-1);
 		}
-		i += skip_non_numeric(str + i);
-		i += getnbr(number, str + i);
-		i += skip_to_word(str + i);
-		i += getword(word, str + i);
-		i += skip_to_next_entry(str + i);
+		i += dict_skip_non_numeric(str + i);
+		i += dict_getnbr(number, str + i);
+		i += dict_skip_to_word(str + i);
+		i += dict_getword(word, str + i);
+		i += dict_skip_to_next_entry(str + i);
 		dict_set(origin, number, word);
 		free(number);
 		free(word);

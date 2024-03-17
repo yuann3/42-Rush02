@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dict_new.h                                         :+:      :+:    :+:   */
+/*   ft_split.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamu <mamu@c2r6s9.42singapore.sg>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 15:29:46 by mamu              #+#    #+#             */
-/*   Updated: 2024/03/17 18:44:53 by mamu             ###   ########.fr       */
+/*   Created: 2024/03/17 18:38:11 by mamu              #+#    #+#             */
+/*   Updated: 2024/03/17 18:38:21 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DICT_NEW_H
-# define DICT_NEW_H
+#ifndef FT_SPLIT_H
+# define FT_SPLIT_H
 
-# include "dict_type.h"
-
-t_dict	dict_new(void);
+char	**ft_split(char *str, char *charset);
 
 #endif

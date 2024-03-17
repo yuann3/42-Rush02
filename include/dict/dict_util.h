@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dict_new.h                                         :+:      :+:    :+:   */
+/*   dict_util.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mamu <mamu@c2r6s9.42singapore.sg>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 15:29:46 by mamu              #+#    #+#             */
-/*   Updated: 2024/03/17 18:44:53 by mamu             ###   ########.fr       */
+/*   Created: 2024/03/17 18:38:52 by mamu              #+#    #+#             */
+/*   Updated: 2024/03/17 18:41:03 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DICT_NEW_H
-# define DICT_NEW_H
+#ifndef DICT_UTIL_H
+# define DICT_UTIL_H
 
-# include "dict_type.h"
-
-t_dict	dict_new(void);
+int	dict_skip_non_numeric(char *str);
+int	dict_skip_to_word(char *str);
+int	dict_skip_to_next_entry(char *str);
+int	dict_getnbr(char *dest, char *str);
+int	dict_getword(char *dest, char *str);
 
 #endif

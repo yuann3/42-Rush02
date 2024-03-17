@@ -6,11 +6,11 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 17:25:21 by welee             #+#    #+#             */
-/*   Updated: 2024/03/17 12:21:49 by welee            ###   ########.fr       */
+/*   Updated: 2024/03/17 18:45:07 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./ft/ft_strlen.h"
+#include "ft.h"
 
 /// @brief concatenate two strings
 /// @param dest the destination string

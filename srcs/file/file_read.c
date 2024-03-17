@@ -6,14 +6,13 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:20:14 by mintan            #+#    #+#             */
-/*   Updated: 2024/03/16 18:01:53 by welee            ###   ########.fr       */
+/*   Updated: 2024/03/17 18:43:03 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdlib.h>
-
 #include "ft.h"
 
 #define BUF_SIZE 4096
