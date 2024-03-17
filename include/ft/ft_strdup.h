@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   ft_strdup.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 15:18:24 by welee             #+#    #+#             */
-/*   Updated: 2024/03/17 23:19:47 by welee            ###   ########.fr       */
+/*   Created: 2024/03/17 23:19:13 by welee             #+#    #+#             */
+/*   Updated: 2024/03/17 23:19:31 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_H
-# define FT_H
+#ifndef FT_STRDUP_H
+# define FT_STRDUP_H
 
-# include "ft/ft_atoi.h"
-# include "ft/ft_error.h"
-# include "ft/ft_putchar.h"
-# include "ft/ft_putstr.h"
-# include "ft/ft_strcmp.h"
-# include "ft/ft_strlen.h"
-# include "ft/ft_strcat.h"
-# include "ft/ft_strcpy.h"
-# include "ft/ft_strncat.h"
-# include "ft/ft_strdup.h"
+char	*ft_strdup(const char *s1);
 
 #endif

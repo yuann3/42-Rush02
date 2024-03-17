@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 15:18:24 by welee             #+#    #+#             */
-/*   Updated: 2024/03/17 23:19:47 by welee            ###   ########.fr       */
+/*   Created: 2024/03/05 16:09:45 by welee             #+#    #+#             */
+/*   Updated: 2024/03/17 23:20:12 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_H
-# define FT_H
+#include <stdlib.h>
 
-# include "ft/ft_atoi.h"
-# include "ft/ft_error.h"
-# include "ft/ft_putchar.h"
-# include "ft/ft_putstr.h"
-# include "ft/ft_strcmp.h"
-# include "ft/ft_strlen.h"
-# include "ft/ft_strcat.h"
-# include "ft/ft_strcpy.h"
-# include "ft/ft_strncat.h"
-# include "ft/ft_strdup.h"
+char	*ft_strdup(char *src)
+{
+	char	*dest;
+	int		i;
 
-#endif
+	i = 0;
+	while (src[i] != '\0')
+		i++;
+	dest = (char *)malloc(sizeof(char) * (i + 1));
+	if (dest == NULL)
+		return (NULL);
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
