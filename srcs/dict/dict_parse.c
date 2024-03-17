@@ -6,7 +6,7 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 16:27:44 by qxiang            #+#    #+#             */
-/*   Updated: 2024/03/17 17:03:04 by welee            ###   ########.fr       */
+/*   Updated: 2024/03/17 17:05:08 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 #include "dict.h"
 #include "ft.h"
 
-static int	skip_non_numeric(char *str);
-static int	skip_to_word(char *str);
-static int	skip_to_next_entry(char *str);
-static int	getnbr(char *dest, char *str);
-static int	getword(char *dest, char *str);
+int	skip_non_numeric(char *str);
+int	skip_to_word(char *str);
+int	skip_to_next_entry(char *str);
+int	getnbr(char *dest, char *str);
+int	getword(char *dest, char *str);
 
 int	dict_parse(t_dict *origin, char *str)
 {
