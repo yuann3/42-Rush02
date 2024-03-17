@@ -20,4 +20,10 @@ typedef struct s_dict
 	int		size;
 }	t_dict;
 
+typedef struct print_number
+{
+	char	**print;
+	int		size;
+}	printout;
+
 #endif

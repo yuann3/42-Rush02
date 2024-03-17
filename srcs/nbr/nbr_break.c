@@ -17,29 +17,28 @@
 
 /// @brief print a string followed by a newline
 /// @param str string
-void	ft_putstrsp(t_dict *dict, char *str)
+void	ft_putstrsp(t_dict *dict, printout *print, char *str)
 {
 	if (dict_get(dict, str) == 0)
 		exit(1);
 	else
 	{
-		ft_putstr(dict_get(dict, str));
-		ft_putchar(' ');
+		ft_strcat(p1.print, dict_get(dict, str));
 	}
 }
 
 /// @brief print the ones place of a number
 /// @param dict dictionary
 /// @param str number
-void	nbr_print_ones(t_dict *dict, char *str)
+void	nbr_print_ones(t_dict *dict, printout *print, char *str)
 {
-	ft_putstrsp(dict, str);
+	ft_putstrsp(dict, p1.print, str);
 }
 
 /// @brief print the tens place of a number
 /// @param dict dictionary
 /// @param str number
-void	nbr_print_tens(t_dict *dict, char *str)
+void	nbr_print_tens(t_dict *dict, printout *print, char *str)
 {
 	int	len;
 
@@ -52,25 +51,25 @@ void	nbr_print_tens(t_dict *dict, char *str)
 	if (len == 0)
 		return ;
 	if (len == 1)
-		nbr_print_ones(dict, nbr_substr(str, 0, 0));
+		nbr_print_ones(dict, p1.print, nbr_substr(str, 0, 0));
 	else if (str[0] == '1')
-		ft_putstrsp(dict, str);
+		ft_putstrsp(dict, p1.print, str);
 	else
 	{
-		ft_putstrsp(dict, nbr_pad_zero(str[0], 1));
+		ft_putstrsp(dict, p1.print, nbr_pad_zero(str[0], 1));
 		if (str[1] != '0')
-			nbr_print_ones(dict, nbr_substr(str, 1, 1));
+			nbr_print_ones(dict, p1.print, nbr_substr(str, 1, 1));
 	}
 }
 
-void	nbr_print_hundreds(t_dict *dict, char *str)
+void	nbr_print_hundreds(t_dict *dict, printout *print, char *str)
 {
 	int	len;
 
 	len = ft_strlen(str);
 	if (len == 1 && str[0] == '0')
 	{
-		ft_putstrsp(dict, "0");
+		ft_putstrsp(dict, p1.print, "0");
 		return ;
 	}
 	while (*str == '0')
@@ -81,14 +80,16 @@ void	nbr_print_hundreds(t_dict *dict, char *str)
 	if (len == 0)
 		return ;
 	if (len == 1)
-		ft_putstrsp(dict, str);
+		ft_putstrsp(dict, p1.print, str);
 	else if (len == 2)
-		nbr_print_tens(dict, nbr_substr(str, 0, 1));
+		nbr_print_tens(dict, p1.print, nbr_substr(str, 0, 1));
 	else
 	{
-		nbr_print_ones(dict, nbr_substr(str, 0, 0));
-		ft_putstrsp(dict, "100");
-		nbr_print_tens(dict, nbr_substr(str, 1, 2));
+		if (str[0] == '0' && str[1] == '0' && str[2] == '0')
+			return ;
+		nbr_print_ones(dict, p1.print, nbr_substr(str, 0, 0));
+		ft_putstrsp(dict, printout, "100");
+		nbr_print_tens(dict, p1.print, nbr_substr(str, 1, 2));
 	}
 }
 
@@ -98,8 +99,16 @@ void	nbr_break(t_dict *dict, char *str)
 	int		n;
 	int		len;
 	int		remain;
+	printout	p1;
 
 	i = 0;
+	p1.print = malloc(sizeof(char *) * 128);
+	while (i < 128)
+	{
+		p1.print[i] = malloc(sizeof(char) * 128);
+		i++;
+	}
+	p1.size = 0;
 	len = ft_strlen(str);
 	remain = len;
 	while (i < len)
@@ -107,10 +116,12 @@ void	nbr_break(t_dict *dict, char *str)
 		n = remain % 3;
 		if (n == 0)
 			n = 3;
-		nbr_print_hundreds(dict, nbr_substr(str, i, i + n - 1));
+		nbr_print_hundreds(dict, p1.print, nbr_substr(str, i, i + n - 1));
 		if (remain - n >= 3)
-			ft_putstrsp(dict, nbr_pad_zero('1', remain - n));
+			ft_putstrsp(dict, p1.print, nbr_pad_zero('1', remain - n));
 		i += n;
 		remain -= n;
 	}
+	
+	ft_putstr(p1.print);
 }
