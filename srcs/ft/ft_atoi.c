@@ -13,7 +13,7 @@
 /// @brief convert string to integer
 /// @param str string to be converted
 /// @return integer converted from string
-int	ft_atoi(const char *str)
+int	ft_atoi_check(const char *str)
 {
 	int	i;
 	int	sign;
