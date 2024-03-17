@@ -19,7 +19,11 @@ static int	init(char *dict_path, char *input)
 
 	str = file_read(dict_path);
 	dict = dict_new();
-	dict_parse(&dict, str);
+	if (dict_parse(&dict, str) == -1)
+	{
+		ft_error("Dict Error\n");
+		return (1);
+	}
 	nbr_break(&dict, input);
 	ft_putchar('\n');
 	return (0);
