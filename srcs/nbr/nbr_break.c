@@ -6,7 +6,7 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 02:38:42 by mamu              #+#    #+#             */
-/*   Updated: 2024/03/17 22:44:34 by mamu             ###   ########.fr       */
+/*   Updated: 2024/03/17 22:54:10 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "ft.h"
 #include "nbr.h"
 
-int	nbr_store(t_nbr_buffer *buffer, t_dict *dict, char *str)
+static int	nbr_store(t_nbr_buffer *buffer, t_dict *dict, char *str)
 {
 	char	*word;
 
@@ -26,12 +26,7 @@ int	nbr_store(t_nbr_buffer *buffer, t_dict *dict, char *str)
 	return (0);
 }
 
-int	nbr_print_ones(t_nbr_buffer *buffer, t_dict *dict, char *str)
-{
-	return (nbr_store(buffer, dict, str));
-}
-
-int	nbr_print_tens(t_nbr_buffer *buffer, t_dict *dict, char *str)
+static int	nbr_print_tens(t_nbr_buffer *buffer, t_dict *dict, char *str)
 {
 	int	len;
 
@@ -44,17 +39,17 @@ int	nbr_print_tens(t_nbr_buffer *buffer, t_dict *dict, char *str)
 	if (len == 0)
 		return (0);
 	if (len == 1)
-		return (nbr_print_ones(buffer, dict, nbr_substr(str, 0, 0)));
+		return (nbr_store(buffer, dict, nbr_substr(str, 0, 0)));
 	if (str[0] == '1')
 		return (nbr_store(buffer, dict, str));
 	if (nbr_store(buffer, dict, nbr_pad_zero(str[0], 1)) == -1)
 		return (-1);
 	if (str[1] != '0')
-		return (nbr_print_ones(buffer, dict, nbr_substr(str, 1, 1)));
+		return (nbr_store(buffer, dict, nbr_substr(str, 1, 1)));
 	return (0);
 }
 
-int	nbr_print_hundreds(t_nbr_buffer *buffer, t_dict *dict, char *str)
+static int	nbr_print_hundreds(t_nbr_buffer *buffer, t_dict *dict, char *str)
 {
 	int	len;
 
@@ -72,7 +67,7 @@ int	nbr_print_hundreds(t_nbr_buffer *buffer, t_dict *dict, char *str)
 		return (nbr_store(buffer, dict, str));
 	if (len == 2)
 		return (nbr_print_tens(buffer, dict, nbr_substr(str, 0, 1)));
-	if (nbr_print_ones(buffer, dict, nbr_substr(str, 0, 0)) == -1)
+	if (nbr_store(buffer, dict, nbr_substr(str, 0, 0)) == -1)
 		return (-1);
 	if (nbr_store(buffer, dict, "100") == -1)
 		return (-1);
@@ -81,15 +76,13 @@ int	nbr_print_hundreds(t_nbr_buffer *buffer, t_dict *dict, char *str)
 	return (0);
 }
 
-int	nbr_break(t_dict *dict, char *str)
+int	nbr_break(t_nbr_buffer *buffer, t_dict *dict, char *str)
 {
 	int				i;
 	int				n;
 	int				remain;
-	t_nbr_buffer	*buffer;
 	char			*digits;
 
-	buffer = nbr_buffer_new();
 	i = 0;
 	remain = ft_strlen(str);
 	while (i < ft_strlen(str))
@@ -107,5 +100,5 @@ int	nbr_break(t_dict *dict, char *str)
 		i += n;
 		remain -= n;
 	}
-	return (nbr_buffer_print(buffer));
+	return (0);
 }

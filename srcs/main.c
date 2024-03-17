@@ -6,30 +6,50 @@
 /*   By: yiyli <etherealdt@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:35:27 by welee             #+#    #+#             */
-/*   Updated: 2024/03/17 22:36:13 by mamu             ###   ########.fr       */
+/*   Updated: 2024/03/17 23:04:06 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.h"
 
+static int	error(void)
+{
+	ft_error("Error\n");
+	return (1);
+}
+
+static int	dict_error(void)
+{
+	ft_error("Dict Error\n");
+	return (1);
+}
+
 static int	init(char *dict_path, char *input)
 {
-	t_dict	dict;
-	char	*str;
+	t_dict			dict;
+	int				dict_code;
+	t_nbr_buffer	*nbr;
+	int				nbr_code;
+	char			*str;
 
 	str = file_read(dict_path);
 	dict = dict_new();
-	if (dict_parse(&dict, str) == -1)
+	dict_code = dict_parse(&dict, str);
+	if (dict_code == -1)
 	{
-		ft_error("Dict Error\n");
-		return (1);
+		dict_destroy(&dict);
+		return (dict_error());
 	}
-	if (nbr_break(&dict, input) == -1)
+	nbr = nbr_buffer_new();
+	nbr_code = nbr_break(nbr, &dict, input);
+	if (nbr_code == -1)
 	{
-		ft_error("Dict Error\n");
-		return (1);
+		nbr_buffer_destroy(nbr);
+		return (dict_error());
 	}
-	ft_putchar('\n');
+	nbr_buffer_print(nbr);
+	nbr_buffer_destroy(nbr);
+	dict_destroy(&dict);
 	return (0);
 }
 
@@ -39,15 +59,9 @@ int	main(int argc, char **argv)
 
 	i = check_arg(argc, argv, DEFAULT_DICT);
 	if (i == 0)
-	{
-		ft_error("Error\n");
-		return (1);
-	}
+		return (error());
 	else if (i == -1)
-	{
-		ft_error("Dict Error\n");
-		return (1);
-	}
+		return (dict_error());
 	if (argc == 2)
 	{
 		init(DEFAULT_DICT, argv[1]);

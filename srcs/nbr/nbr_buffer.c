@@ -6,7 +6,7 @@
 /*   By: mamu <mamu@c2r6s9.42singapore.sg>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 22:02:06 by mamu              #+#    #+#             */
-/*   Updated: 2024/03/17 22:43:53 by mamu             ###   ########.fr       */
+/*   Updated: 2024/03/17 23:04:05 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	nbr_buffer_add(t_nbr_buffer *buffer, char *word)
 	buffer->size += 1;
 }
 
-int	nbr_buffer_print(t_nbr_buffer *buffer)
+void	nbr_buffer_print(t_nbr_buffer *buffer)
 {
 	int	i;
 
@@ -55,5 +55,18 @@ int	nbr_buffer_print(t_nbr_buffer *buffer)
 			ft_putchar(' ');
 		i++;
 	}
-	return (0);
+	ft_putchar('\n');
+}
+
+void	nbr_buffer_destroy(t_nbr_buffer *buffer)
+{
+	int	i;
+
+	i = 0;
+	while (i < buffer->size)
+	{
+		free(buffer->words[i]);
+		i++;
+	}
+	free(buffer);
 }
