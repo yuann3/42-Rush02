@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_arg.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
+/*   By: yiyli <etherealdt@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 17:05:09 by welee             #+#    #+#             */
-/*   Updated: 2024/03/17 18:59:13 by mamu             ###   ########.fr       */
+/*   Updated: 2024/03/17 21:41:12 by yiyli            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ int	check_arg(int argc, char **argv, char *default_dict)
 		return (0);
 	if (argc == 2)
 	{
+		if (!check_digits(argv[1]))
+			return (0);
 		if (!check_dict_file(default_dict))
 		{
 			return (-1);
 		}
-		if (!check_digits(argv[1]))
-			return (0);
 	}
 	if (argc == 3)
 	{
