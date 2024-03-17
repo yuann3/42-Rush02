@@ -6,7 +6,7 @@
 /*   By: yiyli <etherealdt@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:35:27 by welee             #+#    #+#             */
-/*   Updated: 2024/03/17 23:04:06 by mamu             ###   ########.fr       */
+/*   Updated: 2024/03/17 23:26:01 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,20 +36,12 @@ static int	init(char *dict_path, char *input)
 	dict = dict_new();
 	dict_code = dict_parse(&dict, str);
 	if (dict_code == -1)
-	{
-		dict_destroy(&dict);
 		return (dict_error());
-	}
 	nbr = nbr_buffer_new();
 	nbr_code = nbr_break(nbr, &dict, input);
 	if (nbr_code == -1)
-	{
-		nbr_buffer_destroy(nbr);
 		return (dict_error());
-	}
 	nbr_buffer_print(nbr);
-	nbr_buffer_destroy(nbr);
-	dict_destroy(&dict);
 	return (0);
 }
 
