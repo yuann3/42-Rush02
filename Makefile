@@ -25,7 +25,7 @@ NORM_FLAGS := -R CheckForbiddenSourceHeader -R CheckDefine
 
 # Helper function to list all files matching pattern recursively
 # e.g. List all *.c files in srcs/ folder
-rwildcard = $(shell find $(1) -type file -name '$(2)')
+rwildcard = $(shell find $(1) -type f -name '$(2)')
 
 # Find all c files, and convert to o files
 # e.g. srcs/main.c srcs/dict/dict.c => objs/main.o objs/dict/dict.o
