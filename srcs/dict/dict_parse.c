@@ -6,7 +6,7 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 16:27:44 by qxiang            #+#    #+#             */
-/*   Updated: 2024/03/17 11:47:20 by qxiang           ###   ########.fr       */
+/*   Updated: 2024/03/17 16:30:00 by qxiang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,30 +17,36 @@
 
 static int	skip_non_numeric(char *str)
 {
-    int i = 0;
-    while (str[i] && !(str[i] >= '0' && str[i] <= '9'))
-        i++;
-    return i;
+	int	i;
+
+	i = 0;
+	while (str[i] && !(str[i] >= '0' && str[i] <= '9'))
+		i++;
+	return (i);
 }
 
 static int	skip_to_word(char *str)
 {
-    int i = 0;
-    while (str[i] && str[i] != ':' && str[i] != '\n')
-        i++;
-    if (str[i] == ':')
-        i++;
-    while (str[i] == ' ')
-        i++;
-    return i;
+	int	i;
+
+	i = 0;
+	while (str[i] && str[i] != ':' && str[i] != '\n')
+		i++;
+	if (str[i] == ':')
+		i++;
+	while (str[i] == ' ')
+		i++;
+	return (i);
 }
 
 static int	skip_to_next_entry(char *str)
 {
-    int i = 0;
-    if (str[i] == '\n')
-        i++;
-    return i;
+	int	i;
+
+	i = 0;
+	if (str[i] == '\n')
+		i++;
+	return (i);
 }
 
 static int	getnbr(char *dest, char *str)
@@ -75,15 +81,13 @@ static int	getword(char *dest, char *str)
 	return (i);
 }
 
-t_dict	dict_parse(char *str)
+int	dict_parse(t_dict *origin, char *str)
 {
 	int			i;
 	char		*number;
 	char		*word;
-	t_dict		temp;
 
 	i = 0;
-	temp = dict_new();
 	while (str[i])
 	{
 		number = malloc(sizeof(char) * 64);
@@ -92,19 +96,16 @@ t_dict	dict_parse(char *str)
 		{
 			free(number);
 			free(word);
-			return (temp);
+			return (-1);
 		}
 		i += skip_non_numeric(str + i);
 		i += getnbr(number, str + i);
 		i += skip_to_word(str + i);
 		i += getword(word, str + i);
 		i += skip_to_next_entry(str + i);
-		//printf("****below is dict_parse\n");
-		//printf("number: %s\n", number);
-		//printf("word: %s\n", word);
-		dict_set(&temp, number, word);
+		dict_set(origin, number, word);
 		free(number);
 		free(word);
 	}
-	return (temp);
+	return (0);
 }

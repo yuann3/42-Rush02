@@ -6,7 +6,7 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:28:55 by mamu              #+#    #+#             */
-/*   Updated: 2024/03/16 17:48:27 by welee            ###   ########.fr       */
+/*   Updated: 2024/03/17 16:30:18 by qxiang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@
 static char	**str_arr_new(void)
 {
 	char	**arr;
-	int i = 0;
+	int		i;
 
-	arr = malloc(sizeof(*arr) * 128);
+	i = 0;
+	arr = malloc(sizeof(char *) * 128);
 	while (i < 128)
 	{
 		arr[i] = malloc(sizeof(char) * 128);
