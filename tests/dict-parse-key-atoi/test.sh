@@ -1,1 +1,1 @@
-$BINARY numbers.dict 0
+$BINARY numbers.dict 1
