@@ -1,1 +1,1 @@
-$BINARY numbers.dicts 0 | cat -e
+$BINARY numbers.dicts 0

@@ -1,2 +1,2 @@
-one$
-Dict Error$
+one
+Dict Error

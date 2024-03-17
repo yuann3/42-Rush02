@@ -1,2 +1,2 @@
-$BINARY 1 | cat -e
-$BINARY 0 | cat -e
+$BINARY 1
+$BINARY 0
