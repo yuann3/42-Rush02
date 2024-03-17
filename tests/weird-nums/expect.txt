@@ -1,8 +1,8 @@
-one billion twenty two thousand two hundred twenty nine
-three hundred twenty eight billion seven hundred forty nine million eight hundred twenty three thousand seven
-two hundred thirty nine million nine hundred twenty thousand eleven
-nine trillion eight hundred seventeen billion one hundred
-one hundred billion one
-ten trillion one hundred billion four hundred million fifty thousand one
-nine quadrillion nine hundred eleven trillion two hundred twenty eight billion eight hundred seventy seven million one hundred ten thousand eleven
-ten thousand one
+one billion twenty two thousand two hundred twenty nine$
+three hundred twenty eight billion seven hundred forty nine million eight hundred twenty three thousand seven$
+two hundred thirty nine million nine hundred twenty thousand eleven$
+nine trillion eight hundred seventeen billion one hundred$
+one hundred billion one$
+ten trillion one hundred billion four hundred million fifty thousand one$
+nine quadrillion nine hundred eleven trillion two hundred twenty eight billion eight hundred seventy seven million one hundred ten thousand eleven$
+ten thousand one$
