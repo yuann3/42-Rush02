@@ -12,6 +12,7 @@ for case in ${TEST_DIR}/*; do
   cd $case
 
   # Print test case
+  echo
   echo "=== ${case} ==="
   cat $TEST_FILE
 
