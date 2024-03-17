@@ -1,22 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.h                                             :+:      :+:    :+:   */
+/*   nbr_pad_zero.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 15:12:49 by mamu              #+#    #+#             */
-/*   Updated: 2024/03/17 15:06:05 by welee            ###   ########.fr       */
+/*   Created: 2024/03/17 14:54:55 by welee             #+#    #+#             */
+/*   Updated: 2024/03/17 14:55:56 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MAIN_H
-# define MAIN_H
+#include <stdlib.h>
 
-# include "check.h"
-# include "dict.h"
-# include "file.h"
-# include "ft.h"
-# include "nbr.h"
+/// @brief pad zero to the left of the char
+/// @param c the char to pad
+/// @param zeros the number of zeros to pad
+/// @return the padded string
+char	*nbr_pad_zero(char c, int zeros)
+{
+	char	*p;
+	int		i;
+	int		len;
 
-#endif
+	len = 1 + zeros;
+	p = malloc(len + 1);
+	p[0] = c;
+	i = 1;
+	while (i < len)
+	{
+		p[i] = '0';
+		i++;
+	}
+	p[i] = '\0';
+	return (p);
+}

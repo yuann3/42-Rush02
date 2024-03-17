@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.h                                             :+:      :+:    :+:   */
+/*   nbr_break.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 15:12:49 by mamu              #+#    #+#             */
-/*   Updated: 2024/03/17 15:06:05 by welee            ###   ########.fr       */
+/*   Created: 2024/03/17 14:49:39 by welee             #+#    #+#             */
+/*   Updated: 2024/03/17 15:06:00 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MAIN_H
-# define MAIN_H
+#ifndef NBR_H
+# define NBR_H
 
-# include "check.h"
-# include "dict.h"
-# include "file.h"
-# include "ft.h"
-# include "nbr.h"
+# include "nbr/nbr_break.h"
 
 #endif

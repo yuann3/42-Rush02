@@ -6,27 +6,21 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:35:27 by welee             #+#    #+#             */
-/*   Updated: 2024/03/17 10:38:33 by welee            ###   ########.fr       */
+/*   Updated: 2024/03/17 15:06:11 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.h"
-void nbr_break(t_dict *dict, char *str);
-#include <stdio.h>
 
 int	init(char *dict_path, char *input)
 {
 	t_dict	dict;
 	char	*str;
 
-	(void)input;
 	str = file_read(dict_path);
-	//printf("%s", str);
 	dict = dict_parse(str);
-	//printf("dict get for 1: %s\n", dict_get(&dict, "1"));
 	nbr_break(&dict, input);
-	printf("\n");
-	//printf("%s\n",dict.keys[0]);
+	ft_putchar('\n');
 	return (0);
 }
 

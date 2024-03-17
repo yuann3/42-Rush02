@@ -6,7 +6,7 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 17:06:42 by welee             #+#    #+#             */
-/*   Updated: 2024/03/16 20:40:34 by welee            ###   ########.fr       */
+/*   Updated: 2024/03/17 15:09:07 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	check_dict_file(char *dict)
 	if (fd == -1)
 		return (0);
 	bytes_read = read(fd, buf, BUF_SIZE);
-	if (bytes_read == -1)
+	if (bytes_read <= 0)
 	{
 		close(fd);
 		return (0);
