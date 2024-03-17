@@ -6,7 +6,7 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 02:38:42 by mamu              #+#    #+#             */
-/*   Updated: 2024/03/17 15:21:57 by welee            ###   ########.fr       */
+/*   Updated: 2024/03/17 15:26:50 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ char	*nbr_pad_zero(char c, int zeros);
 /// @param str string
 void	ft_putstrsp(char *str)
 {
-	ft_putstr(str);
 	ft_putchar(' ');
+	ft_putstr(str);
 }
 
 /// @brief print the ones place of a number
