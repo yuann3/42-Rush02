@@ -20,7 +20,7 @@
 void	ft_putstrsp(t_dict *dict, char *str)
 {
 	if (dict_get(dict, str) == 0)
-		return (-1);
+		exit(1);
 	else
 	{
 		ft_putstr(dict_get(dict, str));
