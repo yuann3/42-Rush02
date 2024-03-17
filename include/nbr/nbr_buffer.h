@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   nbr.h                                              :+:      :+:    :+:   */
+/*   nbr_buffer.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
+/*   By: mamu <mamu@c2r6s9.42singapore.sg>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/17 14:49:39 by welee             #+#    #+#             */
-/*   Updated: 2024/03/17 22:05:09 by mamu             ###   ########.fr       */
+/*   Created: 2024/03/17 22:04:36 by mamu              #+#    #+#             */
+/*   Updated: 2024/03/17 22:12:02 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef NBR_H
-# define NBR_H
+#ifndef NBR_BUFFER_H
+# define NBR_BUFFER_H
 
-# include "nbr/nbr_break.h"
-# include "nbr/nbr_buffer.h"
-# include "nbr/nbr_pad_zero.h"
-# include "nbr/nbr_substr.h"
-# include "nbr/nbr_type.h"
+# include "nbr_type.h"
+
+t_nbr_buffer	*nbr_buffer_new(void);
+void			nbr_buffer_add(t_nbr_buffer *buffer, char *word);
+void			nbr_buffer_print(t_nbr_buffer *buffer);
 
 #endif
