@@ -1,0 +1,1 @@
+$BINARY | cat -e
