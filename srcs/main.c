@@ -18,6 +18,7 @@ int	init(char *dict_path, char *input)
 	char	*str;
 
 	str = file_read(dict_path);
+	dict = dict_new();
 	dict_parse(&dict, str);
 	nbr_break(&dict, input);
 	ft_putchar('\n');
