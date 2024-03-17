@@ -99,8 +99,9 @@ t_dict	dict_parse(char *str)
 		i += skip_to_word(str + i);
 		i += getword(word, str + i);
 		i += skip_to_next_entry(str + i);
-		printf("number: %s\n", number);
-		printf("word: %s\n", word);
+		//printf("****below is dict_parse\n");
+		//printf("number: %s\n", number);
+		//printf("word: %s\n", word);
 		dict_set(&temp, number, word);
 		free(number);
 		free(word);
