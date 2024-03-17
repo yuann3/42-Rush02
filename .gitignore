@@ -131,4 +131,5 @@ dkms.conf
 
 .idea
 
+objs/
 rush-02
