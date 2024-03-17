@@ -15,6 +15,6 @@
 
 # include "dict_type.h"
 
-t_dict	dict_parse(char *str);
+int	dict_parse(t_dict *origin, char *str);
 
 #endif
