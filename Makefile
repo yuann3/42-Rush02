@@ -49,7 +49,7 @@ $(NAME): $(objects)
 # Also, consider h file, though it is not included for compilation
 # e.g. srcs/dict/dict.c (srcs/dict/dict.h) => objs/dict/dict.o
 $(OBJECT_DIR)/%.o: $(SOURCE_DIR)/%.c $(INCLUDE_DIR)/%.h
-	@$(NORM) $(NORM_FLAGS) $<
+	@$(NORM) $(NORM_FLAGS) $^
 	@mkdir -p $(@D)
 	$(CC) $(CFLAGS) -c $< -o $@
 
