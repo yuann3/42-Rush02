@@ -3,18 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   dict_set.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mamu <mamu@c2r6s9.42singapore.sg>          +#+  +:+       +#+        */
+/*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:21:23 by mamu              #+#    #+#             */
-/*   Updated: 2024/03/16 16:44:57 by mamu             ###   ########.fr       */
+/*   Updated: 2024/03/17 17:00:10 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "dict.h"
-
 #include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "dict.h"
+#include "ft.h"
+
 /*
 static char	**str_arr_add(char **strs, int size, char *str)
 {
@@ -49,7 +48,7 @@ void	dict_set(t_dict *dict, char *key, char *value)
 */
 void	dict_set(t_dict *dict, char *key, char *value)
 {
-	strcpy(dict->keys[dict->size], key);
-	strcpy(dict->values[dict->size], value);
+	ft_strcpy(dict->keys[dict->size], key);
+	ft_strcpy(dict->values[dict->size], value);
 	dict->size += 1;
 }
