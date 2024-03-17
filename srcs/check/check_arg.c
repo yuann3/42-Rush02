@@ -6,7 +6,7 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 17:05:09 by welee             #+#    #+#             */
-/*   Updated: 2024/03/17 18:42:46 by mamu             ###   ########.fr       */
+/*   Updated: 2024/03/17 18:59:13 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@
 /// @param argc argument count
 /// @param argv argument vector
 /// @return 1 if the arguments are valid, -1 for  0 otherwise
-int	check_arg(int argc, char **argv)
+int	check_arg(int argc, char **argv, char *default_dict)
 {
 	if (argc < 2 || argc > 3)
 		return (0);
 	if (argc == 2)
 	{
-		if (!check_dict_file(DEFAULT_DICT))
+		if (!check_dict_file(default_dict))
 		{
 			return (-1);
 		}

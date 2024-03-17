@@ -6,7 +6,7 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:35:27 by welee             #+#    #+#             */
-/*   Updated: 2024/03/17 18:42:37 by mamu             ###   ########.fr       */
+/*   Updated: 2024/03/17 19:00:07 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	main(int argc, char **argv)
 {
 	int	i;
 
-	i = check_arg(argc, argv);
+	i = check_arg(argc, argv, DEFAULT_DICT);
 	if (i == 0)
 	{
 		ft_error("Error\n");
