@@ -11,16 +11,22 @@
 /* ************************************************************************** */
 
 #include "main.h"
+void nbr_break(t_dict *dict, char *str);
+#include <stdio.h>
 
 int	init(char *dict_path, char *input)
 {
-	// t_dict	dict;
-	// char	*str;
+	t_dict	dict;
+	char	*str;
 
 	(void)input;
-	(void)dict_path;
-	// str = file_read(dict_path);
-	// dict_parse(str);
+	str = file_read(dict_path);
+	//printf("%s", str);
+	dict = dict_parse(str);
+	//printf("dict get for 1: %s\n", dict_get(&dict, "1"));
+	nbr_break(&dict, input);
+	printf("\n");
+	//printf("%s\n",dict.keys[0]);
 	return (0);
 }
 
