@@ -6,13 +6,12 @@
 #    By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/16 16:28:52 by yiyli             #+#    #+#              #
-#    Updated: 2024/03/17 18:46:33 by mamu             ###   ########.fr        #
+#    Updated: 2024/03/17 19:04:40 by mamu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME ?= rush-02
 
-DATA_DIR := data
 SOURCE_DIR := srcs
 INCLUDE_DIR := include
 OBJECT_DIR := objs
@@ -27,10 +26,13 @@ NORM_FLAGS := -R CheckForbiddenSourceHeader -R CheckDefine
 # e.g. List all *.c files in srcs/ folder
 rwildcard = $(shell find $(1) -type f -name '$(2)')
 
-# Find all c files, and convert to o files
-# e.g. srcs/main.c srcs/dict/dict.c => objs/main.o objs/dict/dict.o
+# Find all files we work with
+# e.g. srcs/**/*.c include/**/*.h
 sources := $(call rwildcard,$(SOURCE_DIR),*.c)
 headers := $(call rwildcard,$(INCLUDE_DIR),*.h)
+
+# Convert c files to o files
+# e.g. srcs/main.c srcs/dict/dict.c => objs/main.o objs/dict/dict.o
 objects := $(sources:$(SOURCE_DIR)/%.c=$(OBJECT_DIR)/%.o)
 
 .PHONY: all
