@@ -6,7 +6,7 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 16:27:44 by qxiang            #+#    #+#             */
-/*   Updated: 2024/03/17 17:05:08 by welee            ###   ########.fr       */
+/*   Updated: 2024/03/17 17:14:07 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,10 @@ int	skip_to_next_entry(char *str);
 int	getnbr(char *dest, char *str);
 int	getword(char *dest, char *str);
 
+/// @brief parsing the string and store the key-value pair in the dictionary
+/// @param origin dictionary
+/// @param str the string to be parsed
+/// @return 0 if success, -1 if malloc failed
 int	dict_parse(t_dict *origin, char *str)
 {
 	int			i;
