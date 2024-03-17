@@ -13,7 +13,9 @@
 #include "dict.h"
 
 #include <stdlib.h>
-
+#include <stdio.h>
+#include <string.h>
+/*
 static char	**str_arr_add(char **strs, int size, char *str)
 {
 	char	**arr;
@@ -29,17 +31,24 @@ static char	**str_arr_add(char **strs, int size, char *str)
 	arr[i] = str;
 	return (arr);
 }
-
+*/
 void	dict_set(t_dict *dict, char *key, char *value)
 {
-	char	**keys;
-	char	**values;
+	//char	*keys_local;
+	//char	*values_local;
 
-	keys = str_arr_add(dict->keys, dict->size, key);
-	free(dict->keys);
-	dict->keys = keys;
-	values = str_arr_add(dict->values, dict->size, value);
-	free(dict->values);
-	dict->values = values;
+	//printf("----below is dict_set\n");
+	//keys = str_arr_add(dict->keys, dict->size, key);
+	
+	strcpy(dict->keys[dict->size], key);
+	//printf("keys  is now: %s\n",dict->keys[dict->size]);
+	strcpy(dict->values[dict->size], value);
+	//printf("values  is now: %s\n",dict->values[dict->size]);
+	//free(dict->keys);
+	//dict->keys = keys;
+	//values = str_arr_add(dict->values, dict->size, value);
+	//free(dict->values);
+	//dict->values = values;
 	dict->size += 1;
+	//printf("Size is : %d\n", dict->size);
 }
