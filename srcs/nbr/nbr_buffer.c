@@ -6,14 +6,13 @@
 /*   By: mamu <mamu@c2r6s9.42singapore.sg>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 22:02:06 by mamu              #+#    #+#             */
-/*   Updated: 2024/03/17 22:16:49 by mamu             ###   ########.fr       */
+/*   Updated: 2024/03/17 22:43:53 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "nbr.h"
 #include "ft.h"
-#include <stdio.h>
 
 t_nbr_buffer	*nbr_buffer_new(void)
 {
@@ -44,7 +43,7 @@ void	nbr_buffer_add(t_nbr_buffer *buffer, char *word)
 	buffer->size += 1;
 }
 
-void	nbr_buffer_print(t_nbr_buffer *buffer)
+int	nbr_buffer_print(t_nbr_buffer *buffer)
 {
 	int	i;
 
@@ -56,4 +55,5 @@ void	nbr_buffer_print(t_nbr_buffer *buffer)
 			ft_putchar(' ');
 		i++;
 	}
+	return (0);
 }

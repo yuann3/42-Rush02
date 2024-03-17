@@ -6,7 +6,7 @@
 /*   By: yiyli <etherealdt@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:35:27 by welee             #+#    #+#             */
-/*   Updated: 2024/03/17 21:40:40 by yiyli            ###   ########.fr       */
+/*   Updated: 2024/03/17 22:36:13 by mamu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,11 @@ static int	init(char *dict_path, char *input)
 		ft_error("Dict Error\n");
 		return (1);
 	}
-	nbr_break(&dict, input);
+	if (nbr_break(&dict, input) == -1)
+	{
+		ft_error("Dict Error\n");
+		return (1);
+	}
 	ft_putchar('\n');
 	return (0);
 }
