@@ -12,8 +12,9 @@ for case in ${TEST_DIR}/*; do
   cd $case
 
   # Print test case
+  echo
   echo "=== ${case} ==="
-  echo "$> $(cat $TEST_FILE)"
+  cat $TEST_FILE
 
   # Run test case
   BINARY="${root_dir}/${BINARY}" sh $TEST_FILE > $OUTPUT_FILE
