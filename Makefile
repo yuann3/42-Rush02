@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME ?= rush-02
+NAME := rush-02
 
 SOURCE_DIR := srcs
 INCLUDE_DIR := include
@@ -38,12 +38,12 @@ objects := $(sources:$(SOURCE_DIR)/%.c=$(OBJECT_DIR)/%.o)
 .PHONY: all
 all: $(NAME)
 
-# How to compile binary from all o files
+# Compile binary from all o files
 # e.g. objs/main.o objs/dict/dict.o => rush-02
 $(NAME): $(objects)
 	$(CC) $(CFLAGS) $^ -o $@
 
-# How to compile each c file to o file
+# Compile each c file to o file
 # Also, consider h file, though it is not included for compilation
 # e.g. srcs/dict/dict.c (srcs/dict/dict.h) => objs/dict/dict.o
 $(OBJECT_DIR)/%.o: $(SOURCE_DIR)/%.c $(INCLUDE_DIR)/%.h
