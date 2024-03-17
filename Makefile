@@ -15,6 +15,8 @@ NAME := rush-02
 SOURCE_DIR := srcs
 INCLUDE_DIR := include
 OBJECT_DIR := objs
+TEST_DIR := tests
+TEST_OUTPUT_FILE := output.txt
 
 CC := cc
 CFLAGS := -Wall -Wextra -Werror -I $(INCLUDE_DIR)
@@ -27,7 +29,7 @@ NORM_FLAGS := -R CheckForbiddenSourceHeader -R CheckDefine
 rwildcard = $(shell find $(1) -type f -name '$(2)')
 
 # Find all files we work with
-# e.g. srcs/**/*.c include/**/*.h
+# e.g. srcs/**/*.c, include/**/*.h
 sources := $(call rwildcard,$(SOURCE_DIR),*.c)
 headers := $(call rwildcard,$(INCLUDE_DIR),*.h)
 
@@ -64,4 +66,5 @@ re: fclean all
 
 .PHONY: test
 test: all
-	@sh test.sh
+	$(RM) ${TEST_DIR}/*/${TEST_OUTPUT_FILE}
+	sh test.sh
