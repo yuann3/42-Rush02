@@ -6,7 +6,7 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:35:27 by welee             #+#    #+#             */
-/*   Updated: 2024/03/16 21:11:56 by welee            ###   ########.fr       */
+/*   Updated: 2024/03/17 10:38:33 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 int	init(char *dict_path, char *input)
 {
-	t_dict	dict;
-	char	*str;
+	// t_dict	dict;
+	// char	*str;
 
 	(void)input;
-	str = file_read(dict_path);
-	dict = dict_parse(str);
+	(void)dict_path;
+	// str = file_read(dict_path);
+	// dict_parse(str);
 	return (0);
 }
 

@@ -6,7 +6,7 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 15:18:24 by welee             #+#    #+#             */
-/*   Updated: 2024/03/16 23:23:26 by welee            ###   ########.fr       */
+/*   Updated: 2024/03/17 12:55:56 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include "ft/ft_strcmp.h"
 # include "ft/ft_strlen.h"
 # include "ft/ft_strcat.h"
+# include "ft/ft_strcpy.h"
 # include "ft/ft_strncat.h"
 
 #endif

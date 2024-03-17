@@ -6,12 +6,17 @@
 /*   By: welee <welee@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 17:25:21 by welee             #+#    #+#             */
-/*   Updated: 2024/03/16 23:23:08 by welee            ###   ########.fr       */
+/*   Updated: 2024/03/17 12:21:49 by welee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./ft/ft_strlen.h"
 
+/// @brief concatenate two strings
+/// @param dest the destination string
+/// @param src the source string
+/// @param nb the number of characters to concatenate
+/// @return the concatenated string
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
 	unsigned int	i;
